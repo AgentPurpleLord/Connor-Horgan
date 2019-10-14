@@ -25,8 +25,8 @@ fields:
 - type: file
   name: cover_image
   label: Cover Image
-  description: Shown on the main gallery page, I recommend making these images smaller
-    (approx. 540p) so your website loads quick.
+  description: Main Gallery Cover Photo - Size should be (478x270), as this is what
+    appears on a 1080p screen.
   config:
     maxSize: '1'
 - type: text
@@ -69,7 +69,8 @@ fields:
 - type: image_gallery
   name: gallery
   label: Gallery
-  description: The stream of pictures, you can upload and re-order them in here.
+  description: The stream of pictures, you can upload and re-order here. Max size
+    on is 720p.
 pages:
 - _projects/project02.md
 - _projects/project01.md
