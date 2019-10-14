@@ -98,6 +98,8 @@ fields:
     label: Category Title
   description: I wouldn't recommend using too many, as it may make it look busy. Stick
     to 3 to 4.
+  config:
+    labelField: name
 - type: text
   name: video
   label: Showreel
