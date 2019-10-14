@@ -6,7 +6,7 @@ fields:
   name: layout
   label: layout
   hidden: true
-  default: navbar
+  default: project
 - name: category
   type: select
   default: ''
