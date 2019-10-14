@@ -1,5 +1,5 @@
 ---
-layout: navbar
+layout: project
 category: Realism
 cover_image: assets/img/bed.png
 project_name: Holy Cow Batman
