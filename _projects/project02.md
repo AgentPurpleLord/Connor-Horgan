@@ -1,5 +1,5 @@
 ---
-layout: navbar
+layout: project
 category: Styling
 cover_image: assets/img/boat.png
 project_name: Holy Cow Batman
