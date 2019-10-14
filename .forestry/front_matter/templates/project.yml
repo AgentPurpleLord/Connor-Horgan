@@ -1,0 +1,75 @@
+---
+label: Project
+hide_body: true
+fields:
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+  default: project
+- name: category
+  type: select
+  default: ''
+  config:
+    required: true
+    options:
+    - Styling
+    - Realism
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Category
+  description: This should reflect the categories from the home page.
+- type: file
+  name: cover_image
+  label: Cover Image
+  description: Shown on the main gallery page, I recommend making these images smaller
+    (approx. 540p) so your website loads quick.
+  config:
+    maxSize: '1'
+- type: text
+  name: project_name
+  label: Project Title
+  description: The main title of the project.
+  config:
+    required: true
+- type: textarea
+  name: description
+  label: Description
+  description: Appears on the right hand side bar, brief blurb about what it is.
+- name: project_date
+  type: datetime
+  label: Project Date
+  description: The date you're uploading or the date you made it.
+  config:
+    required: false
+    date_format: DD/MM/YYYY
+    time_format: 
+    display_utc: false
+    export_format: DD/MM/YYYY
+  default: now
+- type: text
+  name: services
+  label: services
+- type: text
+  name: tools
+  label: Tools
+  description: The tools you used, try to keep it short and separate with commas.
+- type: text
+  name: roles
+  label: Roles
+  description: The primary role you worked in.
+- type: text
+  name: video
+  label: Video
+  description: A video if you have one. If you don't include one it will just go straight
+    to the pictures.
+- type: image_gallery
+  name: gallery
+  label: Gallery
+  description: The stream of pictures, you can upload and re-order them in here.
+pages:
+- _projects/project02.md
+- _projects/project01.md
