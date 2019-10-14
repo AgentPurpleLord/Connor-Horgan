@@ -5,64 +5,103 @@ fields:
 - type: text
   name: layout
   label: layout
+  hidden: true
+  default: navbar
 - type: text
   name: title
-  label: title
+  label: Page Title
+  description: This goes after Connor Horgan - <title>
+  config:
+    required: true
+  default: Home
 - type: text
   name: description
-  label: description
+  label: Page Description
+  description: This appears in search engines, e.g. Google.
 - type: text
   name: hero
-  label: hero
+  label: Hero Text
+  description: This is your big front page blurb. If you want things to be highlighted
+    blue, use <b>Text</b>.
+  config:
+    required: true
+  default: I'm Connor Horgan, an <b>Animator</b> and <b>Motion Designer</b> living
+    in Melbourne, currentlylooking for work.
 - type: text
   name: currently
-  label: currently
+  label: Currently
+  description: This is what goes on at the end of your hero blurb, by default is currently
+    looking for work.
+  default: currently looking for work.
+  config:
+    required: true
 - type: field_group_list
   name: current_job
-  label: current_job
+  label: Current Job
   fields:
   - type: text
     name: name
-    label: name
+    label: Job Name
+    default: Looking for Work
   - type: file
     name: img
-    label: img
+    label: Job Image
+    description: This should be a banner style image of the company. It will automatically
+      grayscale itself.
+  description: 'Either set it as the image of a company you''re working for or leave
+    it at "Looking for Work". '
+  config:
+    labelField: name
 - type: field_group_list
   name: previous_jobs
-  label: previous_jobs
+  label: Previous Jobs
   fields:
   - type: text
     name: name
-    label: name
+    label: Job Name
   - type: file
     name: img
-    label: img
+    label: Job Image
+  description: 'A list of previous jobs you''ve worked in before. '
 - type: text
   name: footer_text
-  label: footer_text
+  label: Footer Blurb
+  description: The blurb in the footer.
+  default: Looking for a motion designer?
 - type: text
   name: footer_call
-  label: footer_call
+  label: Footer Secondary Blurb
+  description: The one beneath that
+  default: Let's talk.
 - type: field_group_list
   name: social
-  label: social
+  label: Social Links
   fields:
   - type: text
     name: name
-    label: name
+    label: Social Name
   - type: text
     name: url
-    label: url
+    label: Social URL
+  description: These list at the bottom for clients to reach you on.
+  config:
+    labelField: name
 - type: field_group_list
   name: gallery_categories
-  label: gallery_categories
+  label: Gallery Categories
   fields:
   - type: text
     name: name
-    label: name
+    label: Category Name
   - type: text
     name: title
-    label: title
+    label: Category Title
+  description: I wouldn't recommend using too many, as it may make it look busy. Stick
+    to 3 to 4.
 - type: text
   name: video
-  label: video
+  label: Showreel
+  description: Link to your showreel, this must be the "embed" link, not the regular
+    youtube link.
+  config:
+    required: true
