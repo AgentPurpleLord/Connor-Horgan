@@ -1,9 +1,10 @@
 ---
-layout: project
+layout: navbar
 category: Styling
 cover_image: assets/img/boat.png
 project_name: Holy Cow Batman
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua.
 project_date: April 12th, 2019
 client: That One Company LTD.
 services: Graphic Design
@@ -16,4 +17,5 @@ gallery:
 - assets/img/desert.png
 - assets/img/dude.png
 - assets/img/play.png
+
 ---

@@ -71,4 +71,5 @@ fields:
   label: Gallery
   description: The stream of pictures, you can upload and re-order them in here.
 pages:
+- _projects/project02.md
 - _projects/project01.md
