@@ -1,7 +1,7 @@
 ---
 layout: project
 category: Realism
-cover_image: assets/img/bed_cover.png
+cover_image: assets/img/covers/bed_cover.png
 project_name: Holy Cow Batman
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua.

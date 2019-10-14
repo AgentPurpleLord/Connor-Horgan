@@ -1,7 +1,7 @@
 ---
 layout: project
 category: Styling
-cover_image: assets/img/boat_cover.png
+cover_image: assets/img/covers/boat_cover.png
 project_name: Holy Cow Batman
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 project_date: April 12th, 2019
