@@ -69,7 +69,8 @@ fields:
 - type: image_gallery
   name: gallery
   label: Gallery
-  description: The stream of pictures, you can upload and re-order them in here.
+  description: The stream of pictures, you can upload and re-order here. Max size
+    on is 720p.
 pages:
 - _projects/project02.md
 - _projects/project01.md
