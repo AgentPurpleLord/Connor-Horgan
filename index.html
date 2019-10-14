@@ -83,7 +83,7 @@ video: https://www.youtube.com/embed/dQw4w9WgXcQ
                 <div class="col col--1-2 gallery__item {{ item.category }}">
                     <a href="{{ item.url }}">
                         <figure>
-                            <img src="{{ item.cover_image | relative_url }}" alt="{{ item.project_name }}" />
+                            <img src="{{ site.url }}/assets/brand/blur.png" data-echo="{{ item.cover_image | relative_url }}" alt="{{ item.project_name }}" />
                         </figure>
                         <h4>{{ item.project_name }}</h4>
                     </a>

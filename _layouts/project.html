@@ -21,7 +21,7 @@ description: {{ page.description }}
 
             <div class="project__images">
                 {% for image in page.gallery %}
-                <img src="{{ image | relative_url }}" alt=" {{ image.name }}" />
+                <img src="{{ site.url }}/assets/brand/blur.png" data-echo="{{ image | relative_url }}" alt=" {{ image.name }}" />
                 {% endfor %}
             </div>
         </div>
