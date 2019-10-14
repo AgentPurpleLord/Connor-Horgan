@@ -1,0 +1,44 @@
+---
+permalink: pretty
+layout: navbar
+title: {{ page.project_name }}
+description: {{ page.description }}
+---
+
+<div class="container--lg">
+    <div class="flex-grid flex-grid--md project">
+        <div class="flex-grid__col project__gallery">
+            <h1>{{ page.project_name }}</h1>
+            <p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>&nbsp{{ page.project_date }}
+                &nbsp&nbsp<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>&nbsp{{ page.category }}
+            </p>
+            {% if page.video %}
+            <div class="project__video">
+                <iframe width="560" height="315" frameborder="0" src="{{ page.video }}" gesutre="media" accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            {% endif %}
+
+            <div class="project__images">
+                {% for image in page.gallery %}
+                <img src="{{ image | relative_url }}" alt=" {{ image.name }}" />
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="flex-grid__col flex-grid__col--sm project__info">
+            <div>
+                <h2>Description</h2>
+                <p>{{ page.description }}</p>
+            </div>
+            <div>
+                <h2>Tools</h2>
+                <p>{{ page.tools }}</p>
+            </div>
+            <div>
+                <h2>Roles</h2>
+                <p>{{ page.roles }}</p>
+            </div>
+        </div>
+    </div>
+</div>

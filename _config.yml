@@ -1,0 +1,8 @@
+url:  https://AgentPurpleLord.github.io/Connor-Horgan.github.io
+
+plugins:
+  - jekyll-sitemap
+collections:
+  projects:
+    output: true
+    permalink: projects/:title/

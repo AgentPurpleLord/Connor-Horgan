@@ -1,0 +1,96 @@
+---
+layout: navbar
+title: Home
+description:
+hero: I'm Connor Horgan, an <b>Animator</b> and <b>Motion Designer</b> living in Melbourne, currently
+currently: looking for work.
+current_job:
+  - name: Looking for Work
+    img: assets/img/placeholdericon.png
+previous_jobs:
+  - name: Polynaut Studios
+    img: assets/img/previousjobs/polynaut-banner.png
+footer_text: Looking for a motion designer?
+footer_call: Let's talk.
+social:
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/connor-horgan-65821158/?originalSubdomain=au
+  - name: Instagram
+    url: https://www.instagram.com/connor_pixels/
+  - name: Email
+    url: "mailto: testemail@gmail.com"
+
+gallery_categories:
+  - name: Styling
+    title: Styling
+  - name: Realism
+    title: Realism
+
+video: https://www.youtube.com/embed/dQw4w9WgXcQ
+---
+
+<body>
+    <section class="hero container">
+        <h1 class="hero__text">{{ page.hero }}{{ page.currently }}</h1>
+        <div class="row">
+            <div class="currently col col--1-2">
+                <h2 class="currently__header">Currently:</h2>
+                {% for item in page.current_job %}
+                {% if item.name contains "Looking for Work" %}
+                <div class="lfw">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <h3 class="lfw__text">Looking for Work</h3>
+                </div>
+                {% else %}
+                <img class="currently__image" src="{{ item.img | relative_url }}" alt="{{ item.name }} " />
+                {% endif %}
+                {% endfor %}
+            </div>
+            <div class="previously col col--1-2">
+                <h2 class="previously__header">Previously:</h2>
+                {% for item in page.previous_jobs %}
+                <img class="previous__image" src="{{ item.img | relative_url }}" alt="{{ item.name }}" />
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="showreel container">
+        <h1 class="showreel__header">Showreel</h1>
+        <div class="showreel__video">
+            <iframe frameborder="0" src="{{ page.video }}" gesutre="media" accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="gallery container" id="work">
+        <h1 class="gallery__header">Work</h1>
+        <div class="container">
+            <div class="gallery__menu col">
+                <ul class="gallery__nav filter">
+                    <li class="gallery__link active category-item" data-filter="*">
+                        <a href="#">All</a>
+                    </li>
+                    {% for item in page.gallery_categories %}
+                    <li class="gallery__link category-item" data-filter=".{{ item.title }}">
+                        <a href="#">{{ item.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="container--lg">
+            <div class="row isotope__grid gallery__projects">
+                {% for item in site.projects %}
+                <div class="col col--1-2 gallery__item {{ item.category }}">
+                    <a href="{{ item.url }}">
+                        <figure>
+                            <img src="{{ item.cover_image | relative_url }}" alt="{{ item.project_name }}" />
+                        </figure>
+                        <h4>{{ item.project_name }}</h4>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</body>

@@ -1,0 +1,47 @@
+---
+layout: header
+---
+
+<html>
+<body>
+    {{ content }}
+    <footer class="footer container" id="footer">
+        <div>
+            <h3 class="footer__text">{{ page.footer_text }}</h3>
+            <h4 class="footer__call">{{ page.footer_call }}</h4>
+            <ul class="footer__menu">
+                {% for item in page.social %}
+                <li class="footer__item">
+                    <a rel="noopener" aria-label="{{ item.name }}" target="_blank" class="footer__link" href="{{ item.url }}">{{ item.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@2/dist/isotope.pkgd.min.js"></script>
+    <script src="{{ site.url }}/js/iso.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        window.addEventListener('load', AOS.refresh)
+    </script>
+    <script>
+        function checkScroll() {
+            var startY = $('.navbar').height() * 2; //The point where the navbar changes in px
+
+            if ($(window).scrollTop() > startY) {
+                $('.navbar').addClass("scrolled");
+            } else {
+                $('.navbar').removeClass("scrolled");
+            }
+        }
+
+        if ($('.navbar').length > 0) {
+            $(window).on("scroll load resize", function () {
+                checkScroll();
+            });
+        }
+    </script>
+</body>
+</html>
